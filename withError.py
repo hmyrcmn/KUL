@@ -2,8 +2,8 @@ import os
 import random
 
 # Klasördeki tüm txt dosyalarını al
-folder_path = 'C:\Users\HÜMEYRA\Documents\GitHub\KUL\coordinateds2'
-error_folder = 'C:\Users\HÜMEYRA\Documents\GitHub\KUL\errors'
+folder_path = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\KUL\\coordinateds2'
+error_folder = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\errors'
 
 # İfadesiyle belirtilen klasörü oluştur
 os.makedirs(error_folder, exist_ok=True)
@@ -21,14 +21,16 @@ for file_name in file_names:
             x, y = map(float, line.split(','))
             x_values.append(x)
             y_values.append(y)
-
     # Rastgele 5 indeks seç
-    selected_indices = random.sample(range(len(y_values)), 50)
+    error_num = random.randint(5, 50)
+    selected_indices = random.sample(range(len(y_values)), error_num)
 
     # Her bir seçilen indeks için y değeri rastgele bir şekilde değiştir
     for index in selected_indices:
         current_y_value = y_values[index]
-        new_y_value = current_y_value + random.uniform(-5, 5)
+        error_lim = random.randint(0, 5)
+
+        new_y_value = current_y_value + random.uniform(-3, error_lim)
         y_values[index] = new_y_value
 
     # Hatalı dosyayı aynı adla "errors" klasörüne kaydet
