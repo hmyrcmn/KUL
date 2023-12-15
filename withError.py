@@ -10,7 +10,7 @@ os.makedirs(error_folder, exist_ok=True)
 
 file_names = [f for f in os.listdir(folder_path) if f.endswith('.txt')]
 
-for i in range(50):
+for i in range(500):
     for file_name in file_names:
         x_values = []
         y_values = []
@@ -30,7 +30,7 @@ for i in range(50):
         # Her bir seçilen indeks için y değeri rastgele bir şekilde değiştir
         for index in selected_indices:
             current_y_value = y_values[index]
-            error_lim = random.randint(5, 5)
+            error_lim = random.randint(0, 3)
 
             new_y_value = current_y_value + random.uniform(-error_lim, error_lim)
             y_values[index] = new_y_value
