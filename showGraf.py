@@ -2,7 +2,7 @@ import os
 import matplotlib.pyplot as plt
 
 # Klasördeki tüm txt dosyalarını al
-folder_path = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\falseValues'
+folder_path = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\trueValues'
 
 file_names = [f for f in os.listdir(folder_path) if f.endswith('.txt')]
 
@@ -23,6 +23,8 @@ for file_name in file_names:
     plt.plot(x_values, y_values, label=file_name)
 
 # Grafik özellikleri
+plt.xlim(0, 1000)
+plt.ylim(0, 250)
 plt.xlabel('X Ekseni')
 plt.ylabel('Y Ekseni')
 plt.title('Her TXT Dosyasındaki Verilerin Ayrı Ayrı Grafikleri')
