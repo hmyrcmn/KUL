@@ -10,7 +10,7 @@ os.makedirs(error_folder, exist_ok=True)
 
 file_names = [f for f in os.listdir(folder_path) if f.endswith('.txt')]
 
-for i in range(1000):
+for i in range(2000):
     for file_name in file_names:
         x_values = []
         y_values = []
