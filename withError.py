@@ -2,15 +2,15 @@ import os
 import random
 
 # Klasördeki tüm txt dosyalarını al
-folder_path = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\falseMain'
-error_folder = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\errors\\false'
+folder_path = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\falseMain2'
+error_folder = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\falsedata2'
 
 # İfadesiyle belirtilen klasörü oluştur
 os.makedirs(error_folder, exist_ok=True)
 
 file_names = [f for f in os.listdir(folder_path) if f.endswith('.txt')]
 
-for i in range(5):
+for i in range(1000):
     for file_name in file_names:
         x_values = []
         y_values = []
