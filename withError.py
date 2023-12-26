@@ -2,26 +2,31 @@ import os
 import random
 
 # Klasördeki tüm txt dosyalarını al
-folder_path = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\coordinateds2'
-error_folder = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\data\\testmodel\\true'
+folder_path = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\graflar'
+error_folder = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\graflar\\norm'
 
 # İfadesiyle belirtilen klasörü oluştur
 os.makedirs(error_folder, exist_ok=True)
 
 file_names = [f for f in os.listdir(folder_path) if f.endswith('.txt')]
 
-for i in range(5):
+for i in range(1):
     for file_name in file_names:
         x_values = []
         y_values = []
-        
+        say=0
         # Dosyadan veriyi oku
         file_path = os.path.join(folder_path, file_name)
         with open(file_path, 'r') as f:
             for line in f.readlines():
                 x, y = map(float, line.split(','))
                 x_values.append(x)
+                if(say>=50):
+                    y=100
+                else:
+                    y=70
                 y_values.append(y)
+                say+=1
         
         # Rastgele 5 indeks seç
         error_num = random.randint(0, 50)#kac hata lı deger olsun 
@@ -30,9 +35,9 @@ for i in range(5):
         # Her bir seçilen indeks için y değeri rastgele bir şekilde değiştir
         for index in selected_indices:
             current_y_value = y_values[index]
-            error_lim = random.randint(0,3)
+            error_lim = random.randint(0,1)
 
-            new_y_value = current_y_value + random.uniform(-error_lim, error_lim)
+            new_y_value =current_y_value + random.uniform(-error_lim, error_lim)
             y_values[index] = new_y_value
         
         # Dosya adını güncelle
