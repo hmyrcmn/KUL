@@ -22,14 +22,14 @@ for i in range(1):
                 x, y = map(float, line.split(','))
                 x_values.append(x)
                 if(say>=50):
-                    y=100
+                   y=50
                 else:
-                    y=70
+                   y=0
                 y_values.append(y)
                 say+=1
         
         # Rastgele 5 indeks seç
-        error_num = random.randint(0, 50)#kac hata lı deger olsun 
+        error_num = random.randint(0, 100)#kac hata lı deger olsun 
         selected_indices = random.sample(range(len(y_values)), error_num)
 
         # Her bir seçilen indeks için y değeri rastgele bir şekilde değiştir
@@ -37,7 +37,7 @@ for i in range(1):
             current_y_value = y_values[index]
             error_lim = random.randint(0,1)
 
-            new_y_value =current_y_value + random.uniform(-error_lim, error_lim)
+            new_y_value =current_y_value + random.uniform(error_lim, error_lim)
             y_values[index] = new_y_value
         
         # Dosya adını güncelle
