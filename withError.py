@@ -3,7 +3,7 @@ import random
 
 # Klasördeki tüm txt dosyalarını al
 folder_path = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\data'
-error_folder = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\data\\trueValues'
+error_folder = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\data\\trueValues2'
 
 # İfadesiyle belirtilen klasörü oluştur
 os.makedirs(error_folder, exist_ok=True)
