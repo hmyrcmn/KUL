@@ -32,7 +32,7 @@ for i in range(1000):
         # Her bir seçilen indeks için y değeri rastgele bir şekilde değiştir
         for index in selected_indices:
             current_y_value = y_values[index]
-            error_lim = random.randint(0,2)
+            error_lim = random.randint(0,5)
 
             new_y_value =current_y_value + random.uniform(error_lim, error_lim)
             y_values[index] = new_y_value
