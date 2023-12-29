@@ -2,7 +2,7 @@ import os
 import matplotlib.pyplot as plt
 
 # Folder path where the text files are located
-folder_path = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\data\\trueValues2'
+folder_path ='C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\coordinateds2\\falseValues'
 
 # Get the list of all .txt files in the folder
 file_names = [filename for filename in os.listdir(folder_path) if filename.endswith('.txt')]
