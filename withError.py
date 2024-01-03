@@ -26,7 +26,7 @@ for i in range(10):
                 say+=1
         
         # Rastgele 5 indeks seç
-        error_num = random.randint(0, 80)#kac hata lı deger olsun 
+        error_num = random.randint(0, 90)#kac hata lı deger olsun 
         selected_indices = random.sample(range(len(y_values)), error_num)
 
         # Her bir seçilen indeks için y değeri rastgele bir şekilde değiştir
@@ -34,7 +34,7 @@ for i in range(10):
             current_y_value = y_values[index]
             error_lim = random.randint(10,20)
 
-            new_y_value =current_y_value + random.uniform(error_lim, error_lim)
+            new_y_value =current_y_value + random.uniform(-error_lim, error_lim)
             y_values[index] = new_y_value
         
         # Dosya adını güncelle
