@@ -3,14 +3,14 @@ import random
 
 # Klasördeki tüm txt dosyalarını al
 folder_path = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\BigData'
-error_folder = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\BigData\\OBJ\\true'
+error_folder = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\BigData\\TrueValues'
 
 # İfadesiyle belirtilen klasörü oluştur
 os.makedirs(error_folder, exist_ok=True)
 
 file_names = [f for f in os.listdir(folder_path) if f.endswith('.txt')]
 
-for i in range(5):
+for i in range(1000):
     for file_name in file_names:
         x_values = []
         y_values = []
@@ -26,7 +26,7 @@ for i in range(5):
                 say+=1
         
         # Rastgele 5 indeks seç
-        error_num = random.randint(0, 90)#kac hata lı deger olsun 
+        error_num = random.randint(0, 80)#kac hata lı deger olsun 
         selected_indices = random.sample(range(len(y_values)), error_num)
 
         # Her bir seçilen indeks için y değeri rastgele bir şekilde değiştir
