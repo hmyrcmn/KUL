@@ -2,7 +2,7 @@ import os
 import matplotlib.pyplot as plt
 
 # Folder path where the text files are located
-folder_path = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\BigData\\biggerData\\false\\'
+folder_path = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\BigData\\errorDetection\\test\\falseValues'
 
 
 # Get the list of all .txt files in the folder
@@ -36,9 +36,9 @@ plt.figure(figsize=(10, 6))
 for x_values, y_values in zip(all_x_values, all_y_values):
     plt.plot(x_values, y_values, label=f'Data from {file_name}')
 
-plt.title('Data Visualization')
+plt.title('Data Visualization false test ')
 plt.xlabel('X Values')
-plt.legend()
+#plt.legend()
 plt.xlim(0, 1000)
 plt.ylim(150, 250)
 plt.ylabel('Y Values')
