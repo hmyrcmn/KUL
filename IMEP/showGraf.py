@@ -2,7 +2,8 @@ import os
 import matplotlib.pyplot as plt
 
 # Folder path where the text files are located
-folder_path = 'C:\\Users\\HÜMEYRA\\Desktop\\KULElektronik\\coordinateds4'
+folder_path = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\BigData\\biggerData\\false\\'
+
 
 # Get the list of all .txt files in the folder
 file_names = [filename for filename in os.listdir(folder_path) if filename.endswith('.txt')]
@@ -39,6 +40,6 @@ plt.title('Data Visualization')
 plt.xlabel('X Values')
 plt.legend()
 plt.xlim(0, 1000)
-plt.ylim(0, 250)
+plt.ylim(150, 250)
 plt.ylabel('Y Values')
 plt.show()

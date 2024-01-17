@@ -2,7 +2,7 @@ import os
 import matplotlib.pyplot as plt
 
 # Folder path where the text files are located
-folder_path ='C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\coordinateds2\\falseValues'
+folder_path ='C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\BigData\\TrueValues'
 
 # Get the list of all .txt files in the folder
 file_names = [filename for filename in os.listdir(folder_path) if filename.endswith('.txt')]
@@ -35,10 +35,10 @@ plt.figure(figsize=(10, 6))
 for x_values, y_values in zip(all_x_values, all_y_values):
     plt.plot(x_values, y_values, label=f'Data from {file_name}')
 
-plt.title('Data Visualization')
+plt.title('True Data Visualization')
 plt.xlabel('X Values')
-plt.legend()
+# plt.legend()
 plt.xlim(0, 1000)
-plt.ylim(0, 250)
+plt.ylim(150, 250)
 plt.ylabel('Y Values')
 plt.show()
