@@ -3,7 +3,7 @@ import random
 
 # Klasördeki tüm txt dosyalarını al
 folder_path = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\KUL\\BigData\\newData'
-error_folder = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\KUL\\BigData\\newData\\falseVal2'
+error_folder = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\KUL\\BigData\\newData\\fasleVal2'
 
 # İfadesiyle belirtilen klasörü oluştur
 os.makedirs(error_folder, exist_ok=True)
@@ -32,7 +32,7 @@ for i in range(2000):
         # Her bir seçilen indeks için y değeri rastgele bir şekilde değiştir
         for index in selected_indices:
             current_y_value = y_values[index]
-            error_lim = random.randint(2,8)
+            error_lim = random.randint(2,5)
 
             new_y_value =current_y_value + random.uniform(-error_lim, error_lim)
             y_values[index] = new_y_value
