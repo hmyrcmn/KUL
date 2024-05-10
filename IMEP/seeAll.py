@@ -2,8 +2,8 @@ import os
 import matplotlib.pyplot as plt
 
 # Dosyaların bulunduğu klasör yolu
-true_klasor_yolu = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\BigData\\newData\\trueVal'
-false_klasor_yolu = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\BigData\\newData\\falseVal'
+true_klasor_yolu = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\BigData\\TrueValues'
+false_klasor_yolu = 'C:\\Users\\HÜMEYRA\\Documents\\GitHub\\KUL\\BigData\\FalseValues'
 
 # Klasördeki tüm .txt dosyalarının listesini al
 true_dosya_isimleri = [dosya_adi for dosya_adi in os.listdir(true_klasor_yolu) if dosya_adi.endswith('.txt')]

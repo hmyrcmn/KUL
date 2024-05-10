@@ -41,6 +41,6 @@ plt.xlabel('X Values')
 plt.xlim(0, 1000)
 plt.ylim(0, 250)
 #plt.legend()
-
+plt.grid(True)
 plt.ylabel('Y Values')
 plt.show()
